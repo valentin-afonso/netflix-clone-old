@@ -1,3 +1,129 @@
+/* 
+============================
+Settings 
+============================
+*/
+:root {
+	--ignore-margin: calc(((100vw - 100%)/2)*(-1));
+  --primary-color: #fff;
+  --secondary-color: #000000;
+}
+
+/* 
+============================
+Base 
+============================
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html {
+  line-height: 1.15; 
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+main {
+  display: block;
+}
+hr {
+  box-sizing: content-box; 
+  height: 0; 
+  overflow: visible;
+}
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  border-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  font-size: 16px;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/* Remove the inner border and padding in Firefox.*/
+ button::-moz-focus-inner,
+ [type="button"]::-moz-focus-inner,
+ [type="reset"]::-moz-focus-inner,
+ [type="submit"]::-moz-focus-inner {
+   border-style: none;
+   padding: 0;
+ }
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; 
+  padding: 0;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+	animation-duration: 0.01ms !important;
+	animation-iteration-count: 1 !important;
+	transition-duration: 0.01ms !important;
+	scroll-behavior: auto !important;
+  }
+}
+
+/* 
+============================
+GLOBAL
+============================
+*/
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

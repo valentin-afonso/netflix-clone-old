@@ -1,11 +1,12 @@
 import React from 'react'
 import Item from './Item'
+import '../../../styles/layout/ListItems.css'
 
 export default function ListItems() {
   return (
-    <div>
+    <div className='list_items'>
         <h2>Title list</h2>
-        <ul>
+        <ul className='slider'>
             <li>
                 <Item />
             </li>

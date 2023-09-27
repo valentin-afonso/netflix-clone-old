@@ -1,0 +1,15 @@
+.list_items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 3vw 0;
+    padding: 0 20px;
+}
+.list_items .slider {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.list_items ul li {
+    padding: 0 0.2vw;
+    position: relative;
+}

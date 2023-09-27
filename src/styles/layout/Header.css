@@ -1,0 +1,12 @@
+.header {
+    padding: 0 20px;
+}
+.header ul {
+    display: flex;
+}
+.header ul li a {
+    padding: 10px 20px;
+}
+.header ul li a:first-child {
+    padding-left: 0;
+}

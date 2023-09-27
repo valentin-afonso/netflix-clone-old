@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
 import { Auth } from '@supabase/auth-ui-react'
 import { ThemeSupa } from '@supabase/auth-ui-shared'
+import Header from './components/templates/Header/Header'
 import Home from './components/pages/Home'
 
 const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_KEY)
@@ -25,9 +26,17 @@ export default function App() {
   }, [])
 
   if (!session) {
-    return (<Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />)
+    return (
+    <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />
+    )
   }
   else {
-    return (<Home />)
+    return (
+      <div className='content_wrapper'>
+        <Header />
+        <Home />
+      </div>
+      
+    )
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../templates/header/Header'
-import Filters from '../templates/filters/Filters'
-import ListItems from '../templates/listItems/ListItems'
+import Header from '../templates/Header/Header'
+import Filters from '../templates/Filters/Filters'
+import ListItems from '../templates/ListItems/ListItems'
 
 export default function Home() {
   return (

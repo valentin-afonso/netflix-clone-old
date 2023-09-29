@@ -21,8 +21,17 @@ const updatePassword = (updatedPassword) =>
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [auth, setAuth] = useState(false);
+  const [loading, setLoading] = useState(null);
 
   useEffect(() => {
+    setLoading(true);
+    const getUser = async () => {
+      const { data } = await supabase.auth.getUser();
+      const { user: currentUser } = data;
+      setUser(currentUser ?? null);
+      setLoading(false);
+    };
+    getUser();
     const { data } = supabase.auth.onAuthStateChange((event, session) => {
         if (event == "PASSWORD_RECOVERY") {
             setAuth(false);
@@ -40,8 +49,8 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, login, signOut, passwordReset, updatePassword }}>
-      {children}
+    <AuthContext.Provider value={{ auth, user, login, signOut, passwordReset, updatePassword }}>
+      {!loading && children}
     </AuthContext.Provider>
   );
 };

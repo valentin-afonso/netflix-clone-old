@@ -5,6 +5,7 @@ import Login from './components/pages/Login'
 import Home from './components/pages/Home'
 import AuthRoute from './components/AuthRoute';
 import Header from './components/templates/Header/Header'
+import PasswordReset from './components/pages/PasswordReset'
 // console.log(process.env.REACT_APP_SUPABASE_URL)
 // console.log(process.env.REACT_APP_SUPABASE_KEY)
 
@@ -77,6 +78,7 @@ export default function App() {
             </Route>
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/passwordreset" element={<PasswordReset />} />
           </Routes>
 
         </div>

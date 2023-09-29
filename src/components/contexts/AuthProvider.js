@@ -10,19 +10,29 @@ const login = (email, password) =>
 
 const signOut = () => supabase.auth.signOut();
 
+const passwordReset = (email) =>
+  supabase.auth.resetPasswordForEmail(email, {
+    redirectTo: "http://localhost:3000/update-password"
+});
+
+const updatePassword = (updatedPassword) =>
+  supabase.auth.updateUser({ password: updatedPassword });
+
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [auth, setAuth] = useState(false);
 
   useEffect(() => {
     const { data } = supabase.auth.onAuthStateChange((event, session) => {
-      if (event === "SIGNED_IN") {
-        setUser(session.user);
-        setAuth(true);
-      } else if (event === "SIGNED_OUT") {
-        setUser(null);
-        setAuth(false);
-      }
+        if (event == "PASSWORD_RECOVERY") {
+            setAuth(false);
+        } else if (event === "SIGNED_IN") {
+            setUser(session.user);
+            setAuth(true);
+        } else if (event === "SIGNED_OUT") {
+            setAuth(false);
+            setUser(null);
+        }
     });
     return () => {
       data.subscription.unsubscribe();
@@ -30,7 +40,7 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, login, signOut }}>
+    <AuthContext.Provider value={{ user, login, signOut, passwordReset, updatePassword }}>
       {children}
     </AuthContext.Provider>
   );

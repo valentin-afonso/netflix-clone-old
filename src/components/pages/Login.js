@@ -47,6 +47,9 @@ const Login = () => {
       <div>
         New User? <Link to={"/register"}>Register</Link>
       </div>
+      <div className="w-100 text-center mt-2">
+        Forgot Password? <Link to={"/passwordreset"}>Click Here</Link>
+        </div>
     </>
   );
 };

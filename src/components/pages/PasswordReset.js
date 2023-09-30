@@ -24,18 +24,29 @@ const PasswordReset = () => {
 
   return (
     <>
+    <div className="container_form">
       <form onSubmit={handleSubmit}>
-        <h2 className="text-center mb-4">Login</h2>
-        <label>Email</label>
-        <input type="email" ref={emailRef} required/>
-        {msg && (
-            <p>{msg}</p>
-        )}
-        <button type="submit">Send Reset Link</button>
+        <h2>Login</h2>
+        <ul>
+          <li>
+            <label>Email</label>
+            <input type="email" ref={emailRef} required/>
+          </li>
+          <li>
+            <button type="submit">Send Reset Link</button>
+          </li>
+          <li>
+            {msg && (
+              <p>{msg}</p>
+            )}
+          </li>
+        </ul> 
       </form>
-      <div className="w-100 text-center mt-2">
+      <p className="text_link">
         Back to Login? <Link to={"/login"}>Login</Link>
-        </div>
+        </p>
+    </div>
+
     </>
   );
 };

@@ -47,25 +47,39 @@ const Register = () => {
 
   return (
     <>
+    <div className="container_form">
       <form onSubmit={handleSubmit}>
         <h2>Register</h2>
-        <label>Email</label>
-        <input type="email" ref={emailRef} required />
-        <label>Password</label>
-        <input type="password" ref={passwordRef} required />
-        <label>Confirm Password</label>
-        <input type="password" ref={confirmPasswordRef} required />
-        {errorMsg && (
-              <p>{errorMsg}</p>
+        <ul>
+          <li>
+            <label>Email</label>
+            <input type="email" ref={emailRef} required />
+          </li>
+          <li>
+            <label>Password</label>
+            <input type="password" ref={passwordRef} required />
+          </li>
+          <li>
+            <label>Confirm Password</label>
+            <input type="password" ref={confirmPasswordRef} required />
+          </li>
+          <li>
+            <button type="submit">Register</button>
+          </li>
+          <li>
+            {errorMsg && (
+                <p>{errorMsg}</p>
+              )}
+            {msg && (
+                <p>{msg}</p> 
             )}
-        {msg && (
-            <p>{msg}</p> 
-        )}
-        <button type="submit">Register</button>
+          </li>
+        </ul>
       </form>
-      <div>
+      <p className="text_link">
         Already a User? <Link to={"/login"}>Login</Link>
-      </div>
+      </p>
+    </div>
     </>
   );
 };

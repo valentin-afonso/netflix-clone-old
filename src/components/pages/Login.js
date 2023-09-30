@@ -33,23 +33,36 @@ const Login = () => {
 
   return (
     <>
+    <div className="container_form">
       <form onSubmit={handleSubmit}>
-        <h2 className="text-center mb-4">Login</h2>
-        <label>Email</label>
-        <input type="email" name="email" ref={emailRef} required/>
-        <label>Password</label>
-        <input type="password" name="password" ref={passwordRef} required/>
-        <button type="submit">Login</button>
-        {errorMsg && (
-            <p>{errorMsg}</p>
-        )}
+        <h2>Login</h2>
+        <ul>
+          <li>
+            <label>Email</label>
+            <input type="email" name="email" ref={emailRef} required/>
+          </li>
+          <li>
+            <label>Password</label>
+            <input type="password" name="password" ref={passwordRef} required/>
+          </li>
+          <li>
+            <button type="submit">Login</button>
+          </li>
+          <li>
+            {errorMsg && (
+              <p>{errorMsg}</p>
+            )}
+          </li>
+        </ul>
       </form>
-      <div>
+      <p className="text_link">
         New User? <Link to={"/register"}>Register</Link>
-      </div>
-      <div className="w-100 text-center mt-2">
+      </p>
+      <p className="text_link">
         Forgot Password? <Link to={"/passwordreset"}>Click Here</Link>
-        </div>
+      </p>
+    </div>
+
     </>
   );
 };

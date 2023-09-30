@@ -35,17 +35,29 @@ const UpdatePassword = () => {
 
   return (
     <>
+    <div className="container_form">
       <form onSubmit={handleSubmit}>
         <h2 className="text-center mb-4">Update Password</h2>
-        <label>Password</label>
-        <input type="password" ref={passwordRef} required />
-        <label>Confirm Password</label>
-        <input type="password" ref={confirmPasswordRef} required />
-        {errorMsg && (
-            <p>{errorMsg}</p>
-        )}
-        <button type="submit">Update</button>
+        <ul>
+          <li>
+            <label>Password</label>
+            <input type="password" ref={passwordRef} required />
+          </li>
+          <li>
+            <label>Confirm Password</label>
+            <input type="password" ref={confirmPasswordRef} required />
+          </li>
+          <li>
+            {errorMsg && (
+              <p>{errorMsg}</p>
+            )}
+          </li>
+          <li>
+            <button type="submit">Update</button>
+          </li>
+        </ul>
       </form>
+    </div>
     </>
   );
 };

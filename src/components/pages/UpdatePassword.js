@@ -7,7 +7,6 @@ const UpdatePassword = () => {
   const passwordRef = useRef(null);
   const confirmPasswordRef = useRef(null);
   const [errorMsg, setErrorMsg] = useState("");
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -22,7 +21,6 @@ const UpdatePassword = () => {
     }
     try {
       setErrorMsg("");
-      setLoading(true);
       const { data, error } = await updatePassword(passwordRef.current.value);
       if (!error) {
         navigate("/");
@@ -30,7 +28,6 @@ const UpdatePassword = () => {
     } catch (error) {
       setErrorMsg("Error in Updating Password. Please try again");
     }
-    setLoading(false);
   };
 
   return (

@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 const PasswordReset = () => {
   const { passwordReset } = useAuth();
   const emailRef = useRef(null);
-  const [loading, setLoading] = useState(false);
+
   const [msg, setMsg] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      setLoading(true);
       const { data, error } = await passwordReset(emailRef.current.value);
       console.log(error);
       console.log(data);
@@ -19,7 +18,6 @@ const PasswordReset = () => {
     } catch (e) {
       console.log(e);
     }
-    setLoading(false);
   };
 
   return (

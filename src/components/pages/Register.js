@@ -8,7 +8,6 @@ const Register = () => {
   const confirmPasswordRef = useRef(null);
   const [errorMsg, setErrorMsg] = useState("");
   const [msg, setMsg] = useState("");
-  const [loading, setLoading] = useState(false);
 
   const register = (email, password) =>
     supabase.auth.signUp({ email, password });
@@ -29,7 +28,6 @@ const Register = () => {
     }
     try {
       setErrorMsg("");
-      setLoading(true);
       const { data, error } = await register(
         emailRef.current.value,
         passwordRef.current.value
@@ -42,7 +40,6 @@ const Register = () => {
     } catch (error) {
       setErrorMsg("Error in Creating Account");
     }
-    setLoading(false);
   };
 
   return (

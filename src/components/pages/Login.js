@@ -6,7 +6,6 @@ const Login = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const [errorMsg, setErrorMsg] = useState("");
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { login } = useAuth();
 
@@ -14,7 +13,6 @@ const Login = () => {
     e.preventDefault();
     try {
       setErrorMsg("");
-      setLoading(true);
       if (!passwordRef.current?.value || !emailRef.current?.value) {
         setErrorMsg("Please fill in the fields");
         return;
@@ -28,7 +26,6 @@ const Login = () => {
     } catch (error) {
       setErrorMsg("Email or Password Incorrect");
     }
-    setLoading(false);
   };
 
   return (

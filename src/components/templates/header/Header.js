@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthProvider";
 
 export default function Header() {
-  const { auth, signOut } = useAuth();
+  const { auth, signOut, user } = useAuth();
 
   const handleLogout = async (e) => {
     e.preventDefault();
@@ -17,7 +17,32 @@ export default function Header() {
   };
   return (
     <div className='header'>
-        <ul>
+      <nav>
+      <ul>
+          {auth && (
+            <li>
+              <Link as={Link} to="/">Home</Link>
+            </li>
+          )}
+          {auth && (
+            <li>
+              <a href="/">My fav</a>
+            </li>
+          )}
+          {auth && (
+            <li>
+              <a href="/">My list</a>
+            </li>
+          )}                  
+          {auth && (
+            <li>
+              <a href="/">Search</a>
+            </li>
+          )}
+        </ul>
+      </nav>
+      <nav>
+      <ul>
           {!auth && (
               <li>
                 <Link as={Link} to="/login">Login</Link>
@@ -31,24 +56,17 @@ export default function Header() {
             )}
             {auth && (
               <li>
-                <Link as={Link} to="/">Home</Link>
+                <a onClick={handleLogout}>LogOut</a>
               </li>
             )}
             {auth && (
               <li>
-                <a onClick={handleLogout}>LogOut</a>
+                <p>Profil : {user.email}</p>
               </li>
             )}
-            <li>
-              <a href="/">My fav</a>
-            </li>
-            <li>
-              <a href="/">Search</a>
-            </li>
-            <li>
-              <a href="/">Profil :</a>
-            </li>
+
         </ul>
+      </nav>
     </div>
   )
 }

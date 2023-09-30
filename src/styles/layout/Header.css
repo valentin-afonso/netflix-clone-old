@@ -1,12 +1,15 @@
 .header {
     padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
 }
 .header ul {
     display: flex;
 }
-.header ul li a {
+.header ul li a,
+.header ul li p {
     padding: 10px 20px;
 }
-.header ul li a:first-child {
+.header ul li:first-child a {
     padding-left: 0;
 }

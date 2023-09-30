@@ -1,29 +1,28 @@
 .item_content {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: auto;
-    max-height: 180px;
     border-radius: 10px;
-    background-color: var(--bg-color);
     overflow: hidden;
     transition: all .4s;
     font-size: .75rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .item_content .container_image {
     position: relative;
     height: 10rem;
 }
 .container_bottom {
+    opacity: 0;
     padding: 1rem;
+    background-color: var(--bg-color);
+    transition: opacity .4s;
 }
 .item_content .container_image img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: top;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 .item_content .title {
     opacity: 0;
@@ -70,11 +69,20 @@
 .item_content.js-active .overview {
     display: block;
 }
-.list_items ul li.item:hover .item_content{
-    width: 25rem;
-    max-height: 500px;
+.list_items ul li.item:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.4);
     z-index: 2;
 }
+
+.list_items ul li.item:hover .container_bottom {
+    opacity: 1;
+}
+
 .list_items ul li.item:hover .title {
     opacity: 1;
+}
+.list_items ul li.item:hover .item_content .container_image img {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }

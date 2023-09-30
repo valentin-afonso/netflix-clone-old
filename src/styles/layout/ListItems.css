@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 3vw 0;
-    padding: 0 20px;
+    padding: 0 20px 0 70px;
 }
 .list_items .slider {
     display: flex;
@@ -14,5 +14,6 @@
     position: relative;
     width: 18rem;
     height: 10rem;
+    transition: all .4s;
 }
 

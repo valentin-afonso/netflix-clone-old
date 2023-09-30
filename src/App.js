@@ -12,15 +12,18 @@ export default function App() {
     <>
         <div className="content_wrapper">
         <Header />
-          <Routes>
-            <Route element={<AuthRoute />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-            </Route>
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/passwordreset" element={<PasswordReset />} />
-          </Routes>
+          <div className='inside'>
+            <Routes>
+              <Route element={<AuthRoute />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+              </Route>
+              <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/passwordreset" element={<PasswordReset />} />
+            </Routes>
+          </div>
+
 
         </div>
     </> 

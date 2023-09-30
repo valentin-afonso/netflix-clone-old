@@ -56,7 +56,7 @@ export default function Header() {
             )}
             {auth && (
               <li>
-                <a href="/" onClick={handleLogout}>LogOut</a>
+                <a href="/" onClick={handleLogout}>Logout</a>
               </li>
             )}
             {auth && (

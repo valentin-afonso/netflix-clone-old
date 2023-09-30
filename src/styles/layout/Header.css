@@ -1,5 +1,5 @@
 .header {
-    padding: 0 20px;
+    padding: 5px 20px 5px 70px;
     display: flex;
     justify-content: space-between;
 }
@@ -9,6 +9,7 @@
 .header ul li a,
 .header ul li p {
     padding: 10px 20px;
+    font-size: .9rem;
 }
 .header ul li:first-child a {
     padding-left: 0;

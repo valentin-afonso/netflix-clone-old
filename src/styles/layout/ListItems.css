@@ -9,7 +9,10 @@
     display: flex;
     flex-wrap: nowrap;
 }
-.list_items ul li {
-    padding: 0 0.2vw;
+.list_items ul li.item {
+    margin-right: 8px;
     position: relative;
+    width: 18rem;
+    height: 10rem;
 }
+

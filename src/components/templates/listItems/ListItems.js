@@ -7,10 +7,10 @@ export default function ListItems() {
     <div className='list_items'>
         <h2>Title list</h2>
         <ul className='slider'>
-            <li>
+            <li className='item'>
                 <Item />
             </li>
-            <li>
+            <li className='item'>
                 <Item />
             </li>
         </ul>

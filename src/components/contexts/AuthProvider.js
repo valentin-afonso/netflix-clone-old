@@ -21,7 +21,8 @@ const updatePassword = (updatedPassword) =>
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [auth, setAuth] = useState(false);
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(true);
+  // const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -30,6 +31,7 @@ const AuthProvider = ({ children }) => {
       const { user: currentUser } = data;
       setUser(currentUser ?? null);
       setLoading(false);
+      // setInitialized(true);
     };
     getUser();
     const { data } = supabase.auth.onAuthStateChange((event, session) => {
@@ -48,6 +50,12 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
+
+    /*
+    if (!initialized) {
+      return null; 
+    }
+    */
   return (
     <AuthContext.Provider value={{ auth, user, login, signOut, passwordReset, updatePassword }}>
       {!loading && children}

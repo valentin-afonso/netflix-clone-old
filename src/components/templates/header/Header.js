@@ -26,12 +26,12 @@ export default function Header() {
           )}
           {user && (
             <li>
-              <a href="/">My fav</a>
+              <Link as={Link} to="/favourites">Favourites</Link>
             </li>
           )}
           {user && (
             <li>
-              <a href="/">My list</a>
+              <Link as={Link} to="/my-list">My list</Link>
             </li>
           )}                  
           {user && (

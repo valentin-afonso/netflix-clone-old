@@ -1,0 +1,162 @@
+[
+    {
+        "id":1,
+        "adult": false,
+        "backdrop_path": "/xFYpUmB01nswPgbzi8EOCT1ZYFu.jpg",
+        "genre_ids": {
+            "0": 28,
+            "1": 18,
+            "2": 12
+        },
+        "original_language": "en",
+        "original_title": "Gran Turismo",
+        "overview": "The ultimate wish-fulfillment tale of a teenage Gran Turismo player whose gaming skills won him a series of Nissan competitions to become an actual professional racecar driver.",
+        "popularity": 3752.83,
+        "poster_path": "/51tqzRtKMMZEYUpSYkrUE7v9ehm.jpg",
+        "release_date": "2023-08-09",
+        "title": "Gran Turismo",
+        "video": false,
+        "vote_average": 8,
+        "vote_count": 724
+    },
+    {
+        "id":2,
+        "adult": false,
+        "backdrop_path": "/1syW9SNna38rSl9fnXwc9fP7POW.jpg",
+        "genre_ids": {
+            "0": 28,
+            "1": 18,
+            "2": 12
+        },
+        "original_language": "en",
+        "original_title": "Blue Beetle",
+        "overview": "Recent college grad Jaime Reyes returns home full of aspirations for his future, only to find that home is not quite as he left it. As he searches to find his purpose in the world, fate intervenes when Jaime unexpectedly finds himself in possession of an ancient relic of alien biotechnology: the Scarab.",
+        "popularity": 2706.353,
+        "poster_path": "/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
+        "release_date": "2023-08-16",
+        "title": "Blue Beetle",
+        "video": false,
+        "vote_average": 7.1,
+        "vote_count": 1096
+    },
+    {
+        "id":3,
+        "adult": false,
+        "backdrop_path": "/8pjWz2lt29KyVGoq1mXYu6Br7dE.jpg",
+        "genre_ids": {
+            "0": 28,
+            "1": 18,
+            "2": 12
+        },
+        "original_language": "en",
+        "original_title": "Meg 2: The Trench",
+        "overview": "An exploratory dive into the deepest depths of the ocean of a daring research team spirals into chaos when a malevolent mining operation threatens their mission and forces them into a high-stakes battle for survival.",
+        "popularity": 1519.064,
+        "poster_path": "/4m1Au3YkjqsxF8iwQy0fPYSxE0h.jpg",
+        "release_date": "2023-08-02",
+        "title": "Meg 2: The Trench",
+        "video": false,
+        "vote_average": 6.9,
+        "vote_count": 2098
+    },
+    {
+        "id":4,
+        "adult": false,
+        "backdrop_path": "/e8uGiKR2XhV4Zcm0U5JKCxPy8xS.jpg",
+        "genre_ids": {
+            "0": 28,
+            "1": 18,
+            "2": 12
+        },
+        "original_language": "en",
+        "original_title": "Dune",
+        "overview": "The story of Tim Ballard, a former US government agent, who quits his job in order to devote his life to rescuing children from global sex traffickers.",
+        "popularity": 1338.53,
+        "poster_path": "/qA5kPYZA7FkVvqcEfJRoOy4kpHg.jpg",
+        "release_date": "2023-07-03",
+        "title": "Dune",
+        "video": false,
+        "vote_average": 7.9,
+        "vote_count": 513
+    },
+    {
+        "id":5,
+        "adult": false,
+        "backdrop_path": "/mRGmNnh6pBAGGp6fMBMwI8iTBUO.jpg",
+        "genre_ids": {
+            "0": 28,
+            "1": 18,
+            "2": 12
+        },
+        "original_language": "en",
+        "original_title": "The Nun II",
+        "overview": "In 1956 France, a priest is violently murdered, and Sister Irene begins to investigate. She once again comes face-to-face with a powerful evil.",
+        "popularity": 1333.942,
+        "poster_path": "/5gzzkR7y3hnY8AD1wXjCnVlHba5.jpg",
+        "release_date": "2023-09-06",
+        "title": "The Nun II",
+        "video": false,
+        "vote_average": 6.5,
+        "vote_count": 368
+    },
+    {
+        "id":6,
+        "adult": false,
+        "backdrop_path": "/iiXliCeykkzmJ0Eg9RYJ7F2CWSz.jpg",
+        "genre_ids": {
+            "0": 28,
+            "1": 18,
+            "2": 12
+        },
+        "original_language": "en",
+        "original_title": "Retribution",
+        "overview": "When a mysterious caller puts a bomb under his car seat, Matt Turner begins a high-speed chase across the city to complete a specific series of tasks. With his kids trapped in the back seat and a bomb that will explode if they get out of the car, a normal commute becomes a twisted game of life or death as Matt follows the stranger's increasingly dangerous instructions in a race against time to save his family.",
+        "popularity": 1288.533,
+        "poster_path": "/oUmmY7QWWn7OhKlcPOnirHJpP1F.jpg",
+        "release_date": "2023-08-23",
+        "title": "Retribution",
+        "video": false,
+        "vote_average": 6.8,
+        "vote_count": 277
+    },
+    {
+        "id":7,
+        "adult": false,
+        "backdrop_path": "/zYlgqIpqJ1VAbvFhRhktAzIybVs.jpg",
+        "genre_ids": {
+            "0": 28,
+            "1": 18,
+            "2": 12
+        },
+        "original_language": "en",
+        "original_title": "No One Will Save You",
+        "overview": "An exiled anxiety-ridden homebody must battle an alien who's found its way into her home.",
+        "popularity": 3752.83,
+        "poster_path": "/ehGIDAMaYy6Eg0o8ga0oqflDjqW.jpg",
+        "release_date": "2023-09-22",
+        "title": "No One Will Save You",
+        "video": false,
+        "vote_average": 6.9,
+        "vote_count": 389
+    },
+    {
+        "id":8,
+        "adult": false,
+        "backdrop_path": "/e8uGiKR2XhV4Zcm0U5JKCxPy8xS.jpg",
+        "genre_ids": {
+            "0": 28,
+            "1": 18,
+            "2": 12
+        },
+        "original_language": "en",
+        "original_title": "Sound of Freedom",
+        "overview": "The story of Tim Ballard, a former US government agent, who quits his job in order to devote his life to rescuing children from global sex traffickers.",
+        "popularity": 1338.53,
+        "poster_path": "/qA5kPYZA7FkVvqcEfJRoOy4kpHg.jpg",
+        "release_date": "2023-07-03",
+        "title": "Sound of Freedom",
+        "video": false,
+        "vote_average": 7.9,
+        "vote_count": 513
+    }
+]

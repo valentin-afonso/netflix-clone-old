@@ -69,11 +69,6 @@
 .item_content.js-active .overview {
     display: block;
 }
-.list_items ul li.item:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transform: scale(1.4);
-    z-index: 2;
-}
 
 .list_items ul li.item:hover .container_bottom {
     opacity: 1;

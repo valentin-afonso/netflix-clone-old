@@ -12,6 +12,12 @@ export async  function getPopularMovies() {
         let movies = await response.json();
         return movies
       } catch(err) {
-        return err
+        var arrayPopularMovies = [];
+        const response = await fetch(`${process.env.PUBLIC_URL}/data/popularMovies.json`)
+        const respoonseJson = await response.json();
+        respoonseJson.forEach(function(item){
+          arrayPopularMovies.push(item);
+        });
+        return arrayPopularMovies
       }
 }

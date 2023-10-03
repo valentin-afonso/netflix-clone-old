@@ -1,4 +1,5 @@
 .list_items {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -9,11 +10,30 @@
     display: flex;
     flex-wrap: nowrap;
 }
+.list_items .info_data {
+    position: absolute;
+    right: 3rem;
+    font-size: .9rem;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+}
+.list_items .info_data sve {
+    width: 20px;
+    margin-right: 7px;
+}
 .list_items ul li.item {
     margin-right: 8px;
     position: relative;
     width: 18rem;
     height: 10rem;
     transition: all .4s;
+    transition-delay: 0s;
 }
 
+.list_items ul li.item:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.4);
+    z-index: 2;
+    transition-delay: .4s;
+}

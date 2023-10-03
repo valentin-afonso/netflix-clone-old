@@ -3,33 +3,38 @@ import Item from './Item'
 import '../../../styles/layout/ListItems.css'
 import { useEffect, useState } from "react";
 import { getPopularMovies } from "../../../api/tmdb/getPopularMovies"
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 export default function ListItems(props) {
 
   const [listItems, setListItems] = useState([])
+  const [isCurrentData, setIsCurrentData] = useState(true)
   
   useEffect(() => {
     if (props.typeData === 'popular') {
       getPopularMovies()
         .then(items => {
+          console.log(items)
           if (typeof items === 'object' && !Array.isArray(items)) {
             const dataArray = Object.values(items.results);
             setListItems(dataArray);
           } else {
-            console.error("Les données de l'API ne sont pas au format de tableau.");
+            setListItems(items);
+            setIsCurrentData(false);
           }
         })
         .catch(error => {
           console.error("Erreur lors de la récupération des données de l'API :", error);
         });
-        console.log(listItems)
-   
     }
   }, [props.typeData])
-
+ 
   return (
     <div className='list_items'>
         <h2>{props.title}</h2>
+        {!isCurrentData &&
+          <span className='info_data'><InfoOutlinedIcon /> this is fictive data</span>
+        }
         <ul className='slider'>
           {listItems.map(item => (
               <li className='item' key={item.id}>
@@ -42,7 +47,7 @@ export default function ListItems(props) {
                   vote_average={item.vote_average}
                   vote_count={item.vote_count}
                   adult={item.adult}
-                  poster_path={item.poster_path}
+                  poster_path={item.backdrop_path}
                 />
               </li>
             ))

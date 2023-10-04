@@ -37,3 +37,18 @@
     z-index: 2;
     transition-delay: .4s;
 }
+
+.list_items.top .item {
+    display: flex;
+    width: 14rem;
+    height: 15rem;
+}
+.list_items.top .item:not(:first-child) {
+    margin-left: 2rem;
+}
+.list_items.top .item_content .container_image {
+    height: 15rem;
+}
+.list_items.top .item .ranking {
+    font-size: 7rem;
+}

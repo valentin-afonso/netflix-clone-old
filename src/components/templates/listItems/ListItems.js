@@ -51,7 +51,7 @@ export default function ListItems(props) {
         .then(items => {
           console.log(items)
           if (typeof items === 'object' && !Array.isArray(items)) {
-            const dataArray = Object.values(items.results);
+            const dataArray = Object.values(items);
             setListItems(dataArray);
           } else {
             setListItems(items);
@@ -79,16 +79,19 @@ export default function ListItems(props) {
         });
     }
   }, [props.typeData])
- 
+
   return (
-    <div className='list_items'>
+    <div className={'list_items ' + props.typeData }>
         <h2>{props.title}</h2>
         {!isCurrentData &&
           <span className='info_data'><InfoOutlinedIcon /> this is fictive data</span>
         }
         <ul className='slider'>
-          {listItems.map(item => (
+          {listItems.map((item, index) => (
               <li className='item' key={item.id}>
+                {props.typeData === 'top' &&
+                  <span className='ranking'>{index + 1}</span>
+                }
                 <Item 
                   id={item.id}
                   title={item.title}
@@ -98,7 +101,7 @@ export default function ListItems(props) {
                   vote_average={item.vote_average}
                   vote_count={item.vote_count}
                   adult={item.adult}
-                  poster_path={item.backdrop_path}
+                  poster_path={props.typeData === 'top' ? item.poster_path : item.backdrop_path}
                 />
               </li>
             ))

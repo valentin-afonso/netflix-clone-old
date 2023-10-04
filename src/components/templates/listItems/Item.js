@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../../../styles/layout/Item.css'
-import ImgTest from '../../../images/img-dune.jpg'
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';

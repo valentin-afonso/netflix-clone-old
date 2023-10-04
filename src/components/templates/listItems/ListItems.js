@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { getPopularMovies } from "../../../api/tmdb/getPopularMovies"
 import { getNowPlayingMovies } from "../../../api/tmdb/getNowPlayingMovies"
 import { getTopRatedMovies } from "../../../api/tmdb/getTopRatedMovies"
+import { getUpcomingMovies } from "../../../api/tmdb/getUpcomingMovies"
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 export default function ListItems(props) {
@@ -47,6 +48,22 @@ export default function ListItems(props) {
     }
     if (props.typeData === 'top') {
       getTopRatedMovies()
+        .then(items => {
+          console.log(items)
+          if (typeof items === 'object' && !Array.isArray(items)) {
+            const dataArray = Object.values(items.results);
+            setListItems(dataArray);
+          } else {
+            setListItems(items);
+            setIsCurrentData(false);
+          }
+        })
+        .catch(error => {
+          console.error("Erreur lors de la récupération des données de l'API :", error);
+        });
+    }
+    if (props.typeData === 'upcoming') {
+      getUpcomingMovies()
         .then(items => {
           console.log(items)
           if (typeof items === 'object' && !Array.isArray(items)) {

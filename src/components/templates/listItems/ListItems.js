@@ -3,6 +3,7 @@ import Item from './Item'
 import '../../../styles/layout/ListItems.css'
 import { useEffect, useState } from "react";
 import { getPopularMovies } from "../../../api/tmdb/getPopularMovies"
+import { getNowPlayingMovies } from "../../../api/tmdb/getNowPlayingMovies"
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 export default function ListItems(props) {
@@ -13,6 +14,22 @@ export default function ListItems(props) {
   useEffect(() => {
     if (props.typeData === 'popular') {
       getPopularMovies()
+        .then(items => {
+          console.log(items)
+          if (typeof items === 'object' && !Array.isArray(items)) {
+            const dataArray = Object.values(items.results);
+            setListItems(dataArray);
+          } else {
+            setListItems(items);
+            setIsCurrentData(false);
+          }
+        })
+        .catch(error => {
+          console.error("Erreur lors de la récupération des données de l'API :", error);
+        });
+    }
+    if (props.typeData === 'now') {
+      getNowPlayingMovies()
         .then(items => {
           console.log(items)
           if (typeof items === 'object' && !Array.isArray(items)) {

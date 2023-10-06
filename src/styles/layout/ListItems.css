@@ -30,25 +30,35 @@
     transition: all .4s;
     transition-delay: 0s;
 }
-
+.list_items.top ul li.item::after {
+    display: block;
+    content: attr(data-num);
+    font-size: 12rem;
+    position: absolute;
+    left: -92px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .4s .4s;
+    z-index: -1;
+  }
 .list_items ul li.item:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transform: scale(1.4);
     z-index: 2;
     transition-delay: .4s;
 }
-
+.list_items.top ul li.item:hover::after {
+    opacity: 0;
+}
 .list_items.top .item {
     display: flex;
-    width: 14rem;
+    width: 10rem;
     height: 15rem;
+    margin-left: 5rem !important;
 }
 .list_items.top .item:not(:first-child) {
     margin-left: 2rem;
 }
 .list_items.top .item_content .container_image {
     height: 15rem;
-}
-.list_items.top .item .ranking {
-    font-size: 7rem;
 }

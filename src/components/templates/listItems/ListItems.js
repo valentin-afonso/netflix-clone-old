@@ -88,10 +88,7 @@ export default function ListItems(props) {
         }
         <ul className='slider'>
           {listItems.map((item, index) => (
-              <li className='item' key={item.id}>
-                {props.typeData === 'top' &&
-                  <span className='ranking'>{index + 1}</span>
-                }
+              <li className='item' key={item.id} data-num={index + 1}>
                 <Item 
                   id={item.id}
                   title={item.title}

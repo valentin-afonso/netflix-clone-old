@@ -17,7 +17,6 @@ export default function ListItems(props) {
     if (props.typeData === 'popular') {
       getPopularMovies()
         .then(items => {
-          console.log(items)
           if (typeof items === 'object' && !Array.isArray(items)) {
             const dataArray = Object.values(items.results);
             setListItems(dataArray);
@@ -33,7 +32,6 @@ export default function ListItems(props) {
     if (props.typeData === 'now') {
       getNowPlayingMovies()
         .then(items => {
-          console.log(items)
           if (typeof items === 'object' && !Array.isArray(items)) {
             const dataArray = Object.values(items.results);
             setListItems(dataArray);
@@ -49,7 +47,6 @@ export default function ListItems(props) {
     if (props.typeData === 'top') {
       getTopRatedMovies()
         .then(items => {
-          console.log(items)
           if (typeof items === 'object' && !Array.isArray(items)) {
             const dataArray = Object.values(items);
             setListItems(dataArray);
@@ -65,7 +62,6 @@ export default function ListItems(props) {
     if (props.typeData === 'upcoming') {
       getUpcomingMovies()
         .then(items => {
-          console.log(items)
           if (typeof items === 'object' && !Array.isArray(items)) {
             const dataArray = Object.values(items.results);
             setListItems(dataArray);

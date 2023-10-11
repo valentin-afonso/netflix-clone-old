@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 import '../../../styles/layout/Item.css'
 
-import { useAuth } from "../../contexts/AuthProvider";
-import { getFavouriteMovies } from "../../../api/supabase/getFavouriteMovies"
-
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function Item(props) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [favouritesMovies, setFavouritesMovies] = useState([]);
-  const { user } = useAuth();
 
   const expandMore = async (e) => {
     e.preventDefault();
@@ -19,18 +14,7 @@ export default function Item(props) {
   };
   const addToFavourites = async (e) => {
     e.preventDefault()
-
-    getFavouriteMovies(user?.id)
-        .then(items => {
-          console.log(items)
-          if (typeof items === 'object' && !Array.isArray(items)) {
-            const dataArray = Object.values(items);
-            setFavouritesMovies(dataArray);
-          }
-        })
-        .catch(error => {
-          console.error("Erreur lors de la récupération des données de l'API :", error);
-        });
+    console.log('id : ' + props.id)
   }
   const addToMyList = async (e) => {
     e.preventDefault()
